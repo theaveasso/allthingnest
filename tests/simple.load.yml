@@ -1,0 +1,11 @@
+config:
+  target: http://localhost:3000
+  phases:
+    - duration: 3
+      arrivalRate: 200
+      name: Test phase
+
+scenarios:
+  - flow:
+    - get:
+        url: "/with-worker?waittime=1000"
